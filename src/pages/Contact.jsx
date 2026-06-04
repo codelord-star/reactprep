@@ -1,4 +1,4 @@
-function App(){
+function Contact(){
   return(
     <>
       <Header/>
@@ -63,4 +63,4 @@ function Footer(){
   );
 }
 
-export default App
+export default Contact
