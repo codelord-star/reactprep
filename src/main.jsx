@@ -18,6 +18,6 @@ import AppRoutes from "./routes/AppRoutes";
 
 ReactDom.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <AppRoutes/>
+    <App/>
   </React.StrictMode>
 )
