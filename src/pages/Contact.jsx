@@ -1,67 +1,63 @@
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 function Contact(){
   return(
-    <>
+    <div className="contact-page ecommerce-contact container">
       <Navbar/>
       <Header/>
       <ContactForm/>
       <Footer/>
-    </>
+    </div>
   );
 }
 
 function Header(){
   return(
-    <div>
-      <h1>CONTACT FORM</h1>
-      <p>Feel free to share your concerns with us by filling out the form below</p>
-    </div>
+    <header className="contact-header">
+      <h1>Contact Us</h1>
+      <p>Feel free to share your concerns with us by filling out the form below.</p>
+    </header>
   );
 }
 
 function ContactForm(){
   return(
-    <form id="form" action="">
-        <TextField label="Full Name:"/>
-        <TextField label="Email:"/>
+    <form id="contact-form" className="contact-form" onSubmit={(e)=>e.preventDefault()}>
+        <TextField label="Full Name" name="name" />
+        <TextField label="Email" name="email" />
         <MessageArea/>
         <SubmitButton/>
     </form>
   );
 }
 
-function TextField({label, value, onChange}){
+function TextField({label, name, value, onChange}){
   return(
-      <div>
-        <label htmlFor="">{label}</label>
-        <input type="text" value={value} onChange={onChange} />
+      <div className="form-row">
+        <label htmlFor={name}>{label}</label>
+        <input id={name} name={name} type="text" value={value} onChange={onChange} />
       </div>
   );
 }
 
 function MessageArea(){
   return(
-    <div>
-      <label htmlFor="">Message:</label>
-      <textarea name="" id="" cols={30} rows={10} ></textarea>
+    <div className="form-row">
+      <label htmlFor="message">Message</label>
+      <textarea id="message" name="message" cols={30} rows={6}></textarea>
     </div>
   );
 }
 
 function SubmitButton(){
-  function handleClick() {
+  function handleClick(e) {
+    e.preventDefault();
     alert("Message Submitted!");
   }
   return(
-    <button type="submit" onClick={handleClick}>Submit</button>
-  );
-}
-
-function Footer(){
-  return(
-    <div>
-      <p>Accepting change is what makes us better.</p>
+    <div className="form-row">
+      <button className="btn-primary" type="submit" onClick={handleClick}>Submit</button>
     </div>
   );
 }

@@ -1,4 +1,9 @@
 import Navbar from "../components/navbar"
+import Footer from "../components/footer"
+//import hero from "../assets/hero.png"
+import headphones from "../assets/images/headphones.webp"
+import watch from "../assets/images/watch.webp"
+import backpack from "../assets/images/backpack.webp"
 
 function Home() {
     return (
@@ -9,12 +14,12 @@ function Home() {
             <section className="hero">
                 <div className="hero-copy">
                     <span>Shop the Latest</span>
-                    <h1>Quality products made for everyday life</h1>
+                    <h2>Quality products made for everyday life</h2>
                     <p>Explore a curated selection of gadgets, accessories, and essentials with fast shipping and trusted support.</p>
                     <button type="button">Shop Now</button>
                 </div>
                 <div className="hero-image">
-                    <img src="/assets/hero-product.png" alt="Featured product" />
+                    {/* <img src={hero} alt="Featured product" /> */}
                 </div>
             </section>
 
@@ -23,7 +28,7 @@ function Home() {
                 <div className="product-grid">
                     <article className="product-card">
                         <div className="product-image">
-                            <img src="./assets/images/headphones.webp" alt="" />
+                            <img src={headphones} alt="Wireless Headphones" />
                         </div>
                         <h3>Wireless Headphones</h3>
                         <p>Comfortable, noise-cancelling sound with long-lasting battery life.</p>
@@ -31,7 +36,7 @@ function Home() {
                     </article>
                     <article className="product-card">
                         <div className="product-image">
-                            <img src="./assets/images/watch.webp" alt="" />
+                            <img src={watch} alt="Smart Watch" />
                         </div>
                         <h3>Smart Watch</h3>
                         <p>Track health, stay connected, and customize your look with ease.</p>
@@ -39,7 +44,7 @@ function Home() {
                     </article>
                     <article className="product-card">
                         <div className="product-image">
-                            <img src="./assets/images/backpack.webp" alt="" />
+                            <img src={backpack} alt="Everyday Backpack" />
                         </div>
                         <h3>Everyday Backpack</h3>
                         <p>Durable, lightweight carry with dedicated laptop and travel pockets.</p>
@@ -65,6 +70,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     )
 }

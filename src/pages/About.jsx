@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 
 function About() {
     return (
@@ -44,6 +45,7 @@ function About() {
                     checkout feels secure, and every purchase feels like a smart choice.
                 </p>
             </section>
+            <Footer />
         </div>
     );
 }

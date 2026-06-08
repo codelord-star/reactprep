@@ -18,6 +18,10 @@ function Navbar() {
             About
           </Link>
 
+          <Link className="btn btn-outline-light me-2" to="/product">
+            Product
+          </Link>
+
           <Link className="btn btn-outline-light" to="/contact">
             Contact
           </Link>

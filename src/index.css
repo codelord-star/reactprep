@@ -109,9 +109,3 @@ code {
   padding: 4px 8px;
   background: var(--code-bg);
 } */
-
-form{
-  border: 10px;
-  border-color: black;
-  border-radius: 5px;
-}
